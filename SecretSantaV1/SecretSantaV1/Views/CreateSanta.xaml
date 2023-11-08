@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecretSantaV1.Views.CreateSanta">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Frame BackgroundColor="IndianRed" Padding="24" CornerRadius="0">
+                <Label Text="Create Santa" HorizontalTextAlignment="Center" TextColor="ForestGreen" FontSize="36"/>
+            </Frame>
+            <Label Text="Enter Santa Information:" FontSize="Title" Padding="8,10,30,10"/>
+            <Entry x:Name="txtName" Text="" Placeholder="Name" />
+            <Entry x:Name="txtSurname" Text="" Placeholder="Surname" />
+            <Entry x:Name="txtEmail" Text="" Placeholder="Email" />
+            <Entry x:Name="txtMobile" Text="" Placeholder="Mobile" />
+            <Button
+            x:Name="btnCreateSanta"
+            BackgroundColor="LightSeaGreen"
+            TextColor="IndianRed"
+            Text="Create Santa"
+            FontSize="25"
+            FontAttributes="Bold"
+            Clicked="btnCreateSanta_Clicked"
+            />
+            <Button
+            x:Name="btnEditSanta"
+            BackgroundColor="LightSeaGreen"
+            TextColor="IndianRed"
+            Text="Update Santa"
+            FontSize="25"
+            FontAttributes="Bold"
+            Clicked="btnEditSanta_Clicked"
+            />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

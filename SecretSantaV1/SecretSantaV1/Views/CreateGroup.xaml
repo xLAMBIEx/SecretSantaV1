@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecretSantaV1.Views.CreateGroup">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Frame BackgroundColor="IndianRed" Padding="24" CornerRadius="0">
+                <Label Text="Create Santa Group" HorizontalTextAlignment="Center" TextColor="ForestGreen" FontSize="36"/>
+            </Frame>
+            <Label Text="Enter Group Information:" FontSize="Title" Padding="8,10,30,10"/>
+            <Entry x:Name="txtGroupName" Text="" Placeholder="Group Name" />
+            <Entry x:Name="txtDescription" Text="" Placeholder="Description" />
+            <Picker x:Name="pckSantas" Title="Select a Santa" SelectedIndexChanged="pckSantas_SelectedIndexChanged"/>
+            <Button
+            x:Name="btnAddSanta"
+            BackgroundColor="LightSeaGreen"
+            TextColor="IndianRed"
+            Text="Add Selected Santa"
+            FontSize="25"
+            FontAttributes="Bold"
+            Clicked="btnAddSanta_Clicked"
+            />
+            <Button
+            x:Name="btnSaveGroup"
+            BackgroundColor="LightSeaGreen"
+            TextColor="IndianRed"
+            Text="Save Group"
+            FontSize="25"
+            FontAttributes="Bold"
+            Clicked="btnSaveGroup_Clicked"
+            />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

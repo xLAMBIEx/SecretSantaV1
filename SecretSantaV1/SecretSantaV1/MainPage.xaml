@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecretSantaV1.MainPage">
+    <ContentView>
+        <ScrollView Orientation="Vertical">
+            <StackLayout Margin="20">
+                <Frame BackgroundColor="IndianRed" Padding="24" CornerRadius="0">
+                    <Label Text="Secret Santa" HorizontalTextAlignment="Center" TextColor="ForestGreen" FontSize="36"/>
+                </Frame>
+                <Button
+            x:Name="btnManageSantas"
+            BackgroundColor="LightSeaGreen"
+            TextColor="IndianRed"
+            Text="Create Santas"
+            FontSize="25"
+            FontAttributes="Bold"
+            Clicked="btnManageSantas_Clicked"
+        />
+                <Button
+            x:Name="btnManageSantaGroups"
+            BackgroundColor="LightSeaGreen"
+            TextColor="IndianRed"
+            Text="Create Santa Group"
+            FontSize="25"
+            FontAttributes="Bold"
+            Clicked="btnManageSantaGroups_Clicked"
+        />
+                <Picker x:Name="pckSantaGroups" Title="Select the Santa Group" SelectedIndexChanged="pckSantaGroups_SelectedIndexChanged"></Picker>
+                <RadioButton x:Name="radDefaultMesg" GroupName="radsMessage" IsChecked="True" Content="Use default message" CheckedChanged="radDefaultMesg_CheckedChanged"></RadioButton>
+                <RadioButton x:Name="radCustomMesg" GroupName="radsMessage" IsChecked="False" Content="Use custom message"></RadioButton>
+                <Entry x:Name="txtMessage" Text="" Placeholder="Message" ></Entry>
+                <Entry x:Name="txtMaxGiftPrice" Text="" Placeholder="Max gift price" ></Entry>
+                <Label Text="Secret Santa List:" FontSize="Title" Padding="8,10,30,10"/>
+                <Editor x:Name="edtSantas" Text="" IsReadOnly="true" AutoSize="TextChanges" FontSize="14"/>
+                <Button
+            x:Name="btnSubmit"
+            BackgroundColor="GhostWhite"
+            TextColor="#2D28AA"
+            Text="Submit"
+            FontSize="25"
+            FontAttributes="Bold"
+            Clicked="btnSubmit_Clicked"
+        />
+            </StackLayout>
+        </ScrollView>
+    </ContentView>
+</ContentPage>
